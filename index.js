@@ -1,17 +1,9 @@
 // Your code here
-// when using query selector
-// const dodger = document.querySelector('#dodger');
-// when using get element by ID
+
 const dodger = document.getElementById('dodger');
 
 document.addEventListener("keydown", function (event){
   if (event.key==='ArrowLeft'){
-    // replacing the px with a string
-    // const moveLeft = dodger.style.left.replace('px','');
-    // // giving it an actual number
-    // const actualNo = parseInt(moveLeft,10);
-    // //result showing 
-    // dodger.style.left = `${actualNo-5}px`
    moveDodgerLeft(event)
   } else if (event.key==='ArrowRight') {
     moveDodgerRight(event)
@@ -19,7 +11,9 @@ document.addEventListener("keydown", function (event){
 }
 );
 function moveDodgerLeft(event){
+  // replacing the px with a string
     const moveLeft = dodger.style.left.replace('px','');
+    // // giving it an actual number
     const actualNo = parseInt(moveLeft,10);
     if (actualNo > 0){
     dodger.style.left = `${actualNo-5}px`
